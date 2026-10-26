@@ -185,3 +185,34 @@ button { min-height: 36px; }
   .section-heading input { width: 130px; font-size: 13px; }
   .page-heading h1 { line-height: 1.3; }
 }
+
+
+/* User-controlled reading size */
+.text-size-control { display:flex; align-items:center; gap:3px; padding:4px; border:1px solid #e5e7ef; border-radius:9px; background:#f8f9fc; flex-shrink:0; }
+.text-size-control > span { padding:0 5px; color:#747a8a; font-size:11px; white-space:nowrap; }
+.text-size-control button { min-height:32px; padding:5px 8px; border:1px solid transparent; border-radius:6px; background:transparent; color:#626879; font-size:12px; white-space:nowrap; }
+.text-size-control button:hover { background:#eef0ff; }
+.text-size-control button.size-selected { background:#fff; border-color:#d9dcf5; color:#414dbd; font-weight:700; box-shadow:0 1px 2px #20254a0b; }
+.text-size-control button:focus-visible { outline-offset:1px !important; }
+.app.font-small .hero p, .app.font-small .page-heading p, .app.font-small .module-card p, .app.font-small .lesson-intro p, .app.font-small .step-content p { font-size:12px; }
+.app.font-small .module-card h3 { font-size:15px; }
+.app.font-small .step-heading b { font-size:13px; }
+.app.font-large .hero p, .app.font-large .page-heading p, .app.font-large .module-card p, .app.font-large .lesson-intro p, .app.font-large .step-content p { font-size:16px; line-height:1.85; }
+.app.font-large .module-card h3 { font-size:18px; }
+.app.font-large .step-heading b { font-size:16px; }
+.app.font-large .lesson-intro h2 { font-size:25px; }
+.app.font-large .nav, .app.font-large .lesson-nav, .app.font-large .lesson-nav b { font-size:15px; }
+.app.font-large .lesson-nav small { font-size:12px; }
+.app.font-large .primary, .app.font-large .secondary { font-size:14px; }
+.app.font-large .step-content .tip, .app.font-large .meta-block li, .app.font-large .meta-block p, .app.font-large .troubleshooting-list b, .app.font-large .troubleshooting-list p, .app.font-large .success-list { font-size:14px; line-height:1.8; }
+@media (max-width: 850px) {
+  .topbar { height:auto; min-height:66px; flex-wrap:wrap; padding-top:9px; padding-bottom:9px; }
+  .text-size-control { order:3; width:100%; justify-content:center; }
+  .text-size-control > span { margin-right:6px; }
+  .profile { margin-left:auto; }
+}
+@media (max-width: 420px) {
+  .text-size-control { gap:2px; }
+  .text-size-control > span { font-size:12px; }
+  .text-size-control button { flex:1; }
+}
