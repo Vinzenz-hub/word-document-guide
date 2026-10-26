@@ -122,3 +122,66 @@ a:focus-visible {
   .completion-bottom { align-items:stretch; flex-direction:column; }
   .completion-bottom > button { width:100%; justify-content:center; }
 }
+
+
+/* Accessibility: clearer focus, skip navigation, and more comfortable reading */
+html { font-size: 16px; }
+body { line-height: 1.55; }
+button, input, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid #3849c9 !important; outline-offset: 3px !important; }
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 100; padding: 10px 14px; border-radius: 8px; background: #252b55; color: #fff; font-size: 16px; font-weight: 700; transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+button { min-height: 36px; }
+.primary, .secondary { font-size: 13px; padding: 11px 14px; }
+.nav, .lesson-nav { font-size: 13px; }
+.lesson-nav b { font-size: 13px; line-height: 1.4; }
+.lesson-nav small, .progress-card > small, .version { font-size: 11px; }
+.eyebrow, .section-label, .hero-label { font-size: 11px; }
+.breadcrumb, .profile { font-size: 13px; }
+.page-heading p, .hero p { font-size: 14px; line-height: 1.7; }
+.stats small, .section-heading p { font-size: 12px; }
+.module-card { min-height: 175px; padding: 17px; }
+.module-top, .module-bottom { font-size: 12px; }
+.module-card h3 { font-size: 16px; line-height: 1.45; }
+.module-card p { font-size: 13px; line-height: 1.65; }
+.completion-head p { font-size: 13px; }
+.completion-chip { font-size: 11px; }
+.ribbon-tabs button, .ribbon-tools { font-size: 12px; }
+.preview-controls button { font-size: 12px; padding: 8px 10px; }
+.paper { font-size: 13px; line-height: 1.75; }
+.paper p { font-size: 12px; line-height: 1.8; }
+.paper h2 { font-size: 20px; }
+.paper h3 { font-size: 15px; }
+.paper-subtitle, .paper-note { font-size: 11px; line-height: 1.7; }
+.document-footer { font-size: 11px; }
+.guide-title b { font-size: 15px; }
+.guide-title small { font-size: 10px; }
+.lesson-intro h2 { font-size: 22px; line-height: 1.35; }
+.lesson-intro p { font-size: 14px; line-height: 1.7; }
+.category { font-size: 11px; }
+.meta-block b { font-size: 12px; }
+.meta-block li, .meta-block p { font-size: 12px; line-height: 1.7; }
+.step-progress { font-size: 12px; }
+.step-heading b { font-size: 14px; line-height: 1.5; }
+.step-content p { font-size: 14px; line-height: 1.8; }
+.tip { font-size: 12px; line-height: 1.7; }
+.mark { font-size: 12px; min-height: 40px; }
+.lesson-extras summary { font-size: 12px; padding: 13px 11px; }
+.practice-content > b, .practice-content > p, .practice-solution > p { font-size: 12px; line-height: 1.75; }
+.practice-example pre { font-size: 12px; line-height: 1.8; }
+.practice-example > span { font-size: 10px; }
+.troubleshooting-list b, .troubleshooting-list p, .success-list { font-size: 12px; line-height: 1.75; }
+.note { font-size: 12px; line-height: 1.8; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+@media (max-width: 650px) {
+  .topbar { padding-left: 14px; padding-right: 14px; gap: 10px; }
+  .breadcrumb { display: none; }
+  .main { padding-top: 22px; }
+  .hero { padding: 22px 18px; }
+  .hero h2 { font-size: 22px; }
+  .hero>div:first-child { max-width: 78%; }
+  .section-heading input { width: 130px; font-size: 13px; }
+  .page-heading h1 { line-height: 1.3; }
+}
