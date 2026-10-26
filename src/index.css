@@ -76,3 +76,27 @@ a:focus-visible {
 .lesson-extras .practice-solution { margin: 0; border-radius: 6px; background: #fcfcfe; }
 .practice-solution summary { font-size: 9px; padding: 9px; color: #5963c7; }
 .practice-solution > p { padding: 0 9px 9px; margin: 0; }
+
+
+/* Interactive, lesson-specific document preview */
+.preview-controls { display:flex; flex-wrap:wrap; gap:6px; padding:9px 12px; border-bottom:1px solid #e9eaf0; background:#fff; }
+.preview-controls button { border:1px solid #e2e4ed; border-radius:6px; background:#fff; color:#747a89; padding:6px 8px; font-size:9px; }
+.preview-controls button:hover, .preview-controls button.control-active { border-color:#cfd3fb; background:#f0f0ff; color:#515dcc; }
+.paper-stage { align-items:flex-start; gap:10px; }
+.preview-outline { display:flex; flex-direction:column; gap:10px; width:115px; flex-shrink:0; padding:12px 9px; border:1px solid #e1e4ed; border-radius:6px; background:#fff; color:#777d8b; font-size:8px; line-height:1.4; }
+.preview-outline b { color:#555b6c; font-size:9px; }
+.paper { flex-shrink:1; }
+.paper .heading-one { font-size:13px; color:#303441; margin-top:22px; }
+.paper .heading-two { font-size:10px; color:#5b63b9; margin-top:15px; }
+.toc-line { display:flex; align-items:baseline; gap:8px; margin:0 0 15px; padding-bottom:3px; border-bottom:1px dotted #c9ccd6; font-size:9px; color:#555b6c; }
+.toc-line b { font-weight:700; }
+.toc-line span:last-child { margin-left:auto; color:#858a99; }
+.toc-line.nested { margin-left:14px; font-size:8px; }
+.paper.show-marks p::after { content:' ¶'; color:#8a91dd; font-weight:700; }
+.paper.show-marks h2::after, .paper.show-marks h3::after { content:' ¶'; color:#8a91dd; font-size:8px; }
+.format-marks { border-top:1px dashed #cfd2e7; padding-top:7px; color:#777fd1; font-size:8px; letter-spacing:2px; }
+@media(max-width:650px) {
+  .paper-stage { padding:12px 7px; }
+  .preview-outline { width:90px; font-size:7px; padding:9px 6px; }
+  .preview-controls button { font-size:8px; padding:6px; }
+}
