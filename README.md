@@ -7,9 +7,9 @@ Ein interaktiver, deutschsprachiger Leitfaden für die Formatierung längerer Wo
 **Version 0.1 – erster funktionsfähiger Prototyp**
 
 - Word-inspirierte Menüleiste und simulierte Dokumentvorschau
-- Drei Lernmodule: Dokument einrichten, Formatvorlagen verwenden, Inhaltsverzeichnis erstellen
+- Fünf Lernmodule: Dokument einrichten, Formatvorlagen verwenden, Inhaltsverzeichnis erstellen, Seitenzahlen und Kopfzeilen sowie Dokumentprüfung und PDF-Export
 - Geführte Schritte mit Hinweisen und interaktiven Checklisten
-- Fortschrittsanzeige pro Modul und insgesamt
+- Fortschrittsanzeige pro Modul und insgesamt, Lernstandübersicht mit abgeschlossenen Modulen und nächstem sinnvollen Schritt
 - Automatische Speicherung des Lernfortschritts im lokalen Browser
 - Responsive Layout für Desktop, Tablet und Smartphone
 - GitHub-Actions-Workflows für Build-Prüfung und vorbereitete GitHub-Pages-Veröffentlichung
