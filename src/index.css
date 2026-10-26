@@ -64,3 +64,15 @@ a:focus-visible {
   .lesson-meta { padding: 0 13px 12px; }
   .meta-block { padding: 9px; }
 }
+
+
+/* Practical exercise and expandable answer styling */
+.practice-content { padding: 0 11px 11px; }
+.practice-content > b { display: block; color: #555b6c; font-size: 9px; margin: 0 0 5px; }
+.practice-content > p, .practice-solution > p { color: #7d8291; font-size: 9px; line-height: 1.7; margin: 0 0 10px; }
+.practice-example { border: 1px solid #e6e8f2; border-radius: 7px; overflow: hidden; background: #fafaff; margin: 10px 0; }
+.practice-example > span { display: block; background: #f0f0ff; color: #666fc4; font-size: 8px; font-weight: 700; letter-spacing: .8px; padding: 7px 9px; }
+.practice-example pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; padding: 10px; color: #555b6c; font: 10px/1.7 'DM Sans', sans-serif; }
+.lesson-extras .practice-solution { margin: 0; border-radius: 6px; background: #fcfcfe; }
+.practice-solution summary { font-size: 9px; padding: 9px; color: #5963c7; }
+.practice-solution > p { padding: 0 9px 9px; margin: 0; }
