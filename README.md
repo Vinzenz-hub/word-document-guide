@@ -12,6 +12,7 @@ Ein interaktiver, deutschsprachiger Leitfaden für die Formatierung längerer Wo
 - Fortschrittsanzeige pro Modul und insgesamt
 - Automatische Speicherung des Lernfortschritts im lokalen Browser
 - Responsive Layout für Desktop, Tablet und Smartphone
+- GitHub-Actions-Workflows für Build-Prüfung und vorbereitete GitHub-Pages-Veröffentlichung
 
 Die Vorschau bearbeitet oder importiert noch keine echten Word-Dateien (.docx). Der Lernfortschritt wird mit localStorage auf demselben Browser und Gerät gespeichert; es gibt noch keine Anmeldung oder Synchronisierung zwischen Geräten.
 
@@ -51,16 +52,33 @@ npm run build
 npm run preview
 ```
 
-Die fertigen Dateien werden in dist/ erzeugt.
+Die fertigen Dateien werden in `dist/` erzeugt. Bei jedem Push auf `main` prüft GitHub Actions automatisch, ob der Build erfolgreich ist.
+
+## Veröffentlichung mit GitHub Pages
+
+Der Workflow `.github/workflows/deploy.yml` baut die Anwendung und veröffentlicht den Build über GitHub Pages.
+
+Einmalige Einrichtung im Repository:
+
+1. Öffne **Settings → Pages**.
+2. Wähle bei **Build and deployment** als **Source** die Option **GitHub Actions**.
+3. Nach dem nächsten Push auf `main` sollte der Workflow **Deploy to GitHub Pages** die Website veröffentlichen.
+4. Die veröffentlichte Adresse findest du anschließend unter **Settings → Pages** oder im erfolgreichen Deployment-Lauf.
+
+Die Veröffentlichung ist erst bestätigt, wenn der Deployment-Workflow erfolgreich abgeschlossen wurde.
 
 ## Projektstruktur
 
 ```text
 word-document-guide/
+├── .github/
+│   └── workflows/
+│       ├── ci.yml       # Automatische Build-Prüfung
+│       └── deploy.yml   # Build und Veröffentlichung über GitHub Pages
 ├── src/
-│   ├── App.tsx       # Oberfläche, Lernmodule und Fortschrittslogik
-│   ├── index.css     # Layout und responsive Gestaltung
-│   └── main.tsx      # React-Einstiegspunkt
+│   ├── App.tsx          # Oberfläche, Lernmodule und Fortschrittslogik
+│   ├── index.css        # Layout und responsive Gestaltung
+│   └── main.tsx         # React-Einstiegspunkt
 ├── index.html
 ├── package.json
 ├── tsconfig.json
@@ -68,14 +86,13 @@ word-document-guide/
 └── README.md
 ```
 
-## Geplante nächste Schritte
+## Nächste Entwicklungsschritte
 
 1. Inhalte fachlich prüfen und redaktionell ausbauen.
 2. Bedienbarkeit, Tastaturzugänglichkeit und responsive Ansichten testen.
 3. Komponenten und Lerninhalte bei wachsendem Umfang trennen.
 4. Automatische Tests ergänzen.
-5. Veröffentlichung über GitHub Pages oder Vercel vorbereiten.
-6. DOCX-Import und -Analyse als mögliches späteres Feature evaluieren.
+5. DOCX-Import und -Analyse als mögliches späteres Feature evaluieren.
 
 ## Inhaltliche Leitlinie
 
