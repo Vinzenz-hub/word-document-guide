@@ -347,3 +347,5 @@ button { min-height: 36px; }
   .paper.margins-error { padding-left: 34px; padding-right: 34px; }
   .paper.margins-error.show-margins::before { left: 34px; right: 34px; }
 }
+
+.paper.first-page-different.cover-page-number-error footer { display: flex; }
