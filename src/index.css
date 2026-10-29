@@ -311,3 +311,29 @@ button { min-height: 36px; }
   .preview-checklist { padding: 10px; }
   .preview-checklist > span { font-size: 11px; }
 }
+
+
+/* Lesson-specific page setup and repeated header/footer demonstrations */
+.preview-setting-note {
+  align-self: center;
+  color: #8a8f9e;
+  font-size: 11px;
+  padding: 4px 2px;
+}
+.paper-stack.stack-landscape { width: min(100%, 540px); }
+.paper.layout-landscape { width: 100%; min-height: 390px; }
+.paper.layout-landscape .preview-ruler { margin-bottom: 10px; }
+.paper.margins-narrow { padding-left: 22px; padding-right: 22px; }
+.paper.margins-wide { padding-left: 52px; padding-right: 52px; }
+.paper.margins-narrow.show-margins::before { inset-left: 22px; inset-right: 22px; }
+.paper.margins-wide.show-margins::before { left: 52px; right: 52px; }
+.paper.first-page-different .paper-running-header,
+.paper.first-page-different footer { display: none; }
+.paper.first-page-different { padding-top: 38px; }
+@media (max-width: 650px) {
+  .paper-stack.stack-landscape { width: 100%; }
+  .paper.layout-landscape { min-height: 360px; padding: 24px 18px 42px; }
+  .paper.margins-narrow { padding-left: 17px; padding-right: 17px; }
+  .paper.margins-wide { padding-left: 34px; padding-right: 34px; }
+  .preview-setting-note { width: 100%; }
+}
