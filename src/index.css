@@ -246,3 +246,19 @@ button { min-height: 36px; }
   .paper h3 { font-size:12px; }
   .paper p { font-size:10px; }
 }
+
+/* Word-style ruler and simulated page breaks */
+.paper-stage { gap:18px; }
+.preview-ruler { display:flex; justify-content:space-between; align-items:flex-start; position:relative; height:22px; margin:0 0 17px; padding:0 1px; border-bottom:1px solid #cfd3df; color:#777d8e; font:8px/1.2 Arial,sans-serif; background:repeating-linear-gradient(to right, transparent 0, transparent calc(6.666% - 1px), #c9ceda calc(6.666% - 1px), #c9ceda 6.666%); }
+.preview-ruler span { position:relative; padding-top:3px; }
+.preview-ruler span::before { content:""; position:absolute; top:-1px; left:50%; height:5px; border-left:1px solid #c9ceda; }
+.paper > .preview-ruler { width:100%; }
+.page-break-label { width:min(100%,420px); display:flex; align-items:center; gap:10px; color:#7379bf; font-size:9px; font-weight:700; letter-spacing:.8px; }
+.page-break-label::before, .page-break-label::after { content:""; height:1px; flex:1; background:repeating-linear-gradient(to right,#9da3e0 0,#9da3e0 5px,transparent 5px,transparent 9px); }
+.continuation-page { margin-top:0; }
+.paper.continuation-page h2 { margin-top:28px; }
+.paper.continuation-page footer { display:flex; }
+@media (max-width:650px) {
+ .preview-ruler { margin-bottom:12px; }
+ .page-break-label { width:100%; }
+}
